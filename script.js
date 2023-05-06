@@ -11,14 +11,18 @@ function playGame(playerChoice) {
   } else {
     consecutiveWins = 0;
   } 
-  
-  if (consecutiveWins === 10) {
-      consecutiveWins  === '10連勝！'
-  }
 
   document.getElementById('result').innerHTML = 'あなたの選択: ' + playerChoice + '<br>コンピュータの選択: ' + computerChoice + '<br><br>' + result;
   document.getElementById('consecutiveWins').innerHTML = '連続勝利数: ' + consecutiveWins;
+
+  if (consecutiveWins === 10) { // 勝利数が10になった時の確認
+    showPopup('🎉おめでとう！10連勝達成！🎉');
+    consecutiveWins = 10;
+    consecutiveWins = 0;
+    document.getElementById('consecutiveWins').innerHTML = '連続勝利数: ' + consecutiveWins;
+  }
 }
+
 
 function determineWinner(playerChoice, computerChoice) {
   if (playerChoice === computerChoice) {
@@ -32,4 +36,15 @@ function determineWinner(playerChoice, computerChoice) {
   } else {
     return 'コンピュータの勝ち！';
   }
+}
+
+function showPopup(text) {
+  var popupElement = document.createElement('div');
+  popupElement.className = 'popup';
+  popupElement.textContent = text;
+  document.body.appendChild(popupElement);
+
+  setTimeout(function() {
+    popupElement.parentNode.removeChild(popupElement);
+  }, 5000); // 5000ms
 }

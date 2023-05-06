@@ -6,7 +6,7 @@
   <title>じゃんけんゲーム</title>
   <meta name="description" content="じゃんけんを単にWeb上で表したゲーム" />
   <meta property="og:title" content="じゃんけんゲーム" />
-  <meta property="og:description" content="JankenWeb | @kinoko1216" />
+  <meta property="og:description" content="じゃんけんを単にWeb上で表したゲーム" />
   <style>
 .result {
     font-size: 24px;
@@ -35,6 +35,11 @@ h1 {
     margin-bottom: 100px;
     text-align: center;
 }
+
+.popup {
+    font: 100px;
+    text-align: center;
+}
   </style>
   
 </head>
@@ -44,8 +49,11 @@ h1 {
   <button onclick="playGame('パー')" id="botton">✋</button>
   <button onclick="playGame('チョキ')" id="botton">🏹</button>
 
+  <div class="popup" id="popup">
+    <p id="popupText"></p>
   <div class="result" id="result"></div>
   <div class="result" id="consecutiveWins"></div>
+
   <script src="script.js"></script>
 </body>
 </html>
