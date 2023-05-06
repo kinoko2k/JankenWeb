@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>じゃんけんゲーム</title>
+  <meta name="description" content="じゃんけんを単にWeb上で表したゲーム" />
+  <meta property="og:title" content="じゃんけんゲーム" />
+  <meta property="og:description" content="JankenWeb | @kinoko1216" />
+  <style>
+.result {
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+button {
+    width: 10em;
+    height:10em;
+    text-align: center;
+    top: 200%;
+    margin-right: 30px; 
+    margin-left: 25px;
+}
+
+.botton {
+    font-size: 100%;
+}
+
+body {
+    margin-bottom:100cap;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 100px;
+    text-align: center;
+}
+  </style>
+  
+</head>
+<body>
+  <h1>じゃんけんゲーム</h1>
+  <button onclick="playGame('グー')" id="botton">✊</button>
+  <button onclick="playGame('パー')" id="botton">✋</button>
+  <button onclick="playGame('チョキ')" id="botton">🏹</button>
+
+  <div class="result" id="result"></div>
+  <div class="result" id="consecutiveWins"></div>
+  <script src="script.js"></script>
+</body>
+</html>
