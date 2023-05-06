@@ -15,7 +15,7 @@ function playGame(playerChoice) {
   document.getElementById('result').innerHTML = 'あなたの選択: ' + playerChoice + '<br>コンピュータの選択: ' + computerChoice + '<br><br>' + result;
   document.getElementById('consecutiveWins').innerHTML = '連続勝利数: ' + consecutiveWins;
 
-  if (consecutiveWins === 2) { // 勝利数が10になった時の確認
+  if (consecutiveWins === 10) { // 勝利数が10になった時の確認
     showPopup('🎉おめでとう！10連勝達成！🎉');
     consecutiveWins = 10; 
     consecutiveWins = 0;
